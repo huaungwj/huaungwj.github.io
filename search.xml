@@ -3,7 +3,7 @@
   <entry>
     <title>前端</title>
     <url>/2020/04/06/index/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       <categories>
         <category>第一篇文章</category>
       </categories>

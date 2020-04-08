@@ -89,7 +89,7 @@ daovoice('update');
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -102,15 +102,16 @@ daovoice('update');
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://huaungwj.github.io/about/hello-world.html">
+<meta name="description" content="创建数据库指定urf-8编码    CREATE DATABASE databasename DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;  删除数据库 drop databases &lt;databasename&gt;; &gt;&gt;&gt; drop databases pwd;  创建数据表通用语法:  CREATE TABL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySql">
+<meta property="og:url" content="https://huaungwj.github.io/2019/12/04/sql/index.html">
 <meta property="og:site_name" content="WeiBo | 筱海乄">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="article:published_time" content="2020-04-06T13:15:45.182Z">
-<meta property="article:modified_time" content="2020-04-06T12:07:40.266Z">
+<meta property="og:description" content="创建数据库指定urf-8编码    CREATE DATABASE databasename DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;  删除数据库 drop databases &lt;databasename&gt;; &gt;&gt;&gt; drop databases pwd;  创建数据表通用语法:  CREATE TABL">
+<meta property="article:published_time" content="2019-12-04T09:51:56.000Z">
+<meta property="article:modified_time" content="2020-01-29T22:47:38.000Z">
 <meta property="article:author" content="筱海">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
 
 
@@ -141,13 +142,13 @@ daovoice('update');
 
 
 
-  <link rel="canonical" href="https://huaungwj.github.io/about/hello-world.html"/>
+  <link rel="canonical" href="https://huaungwj.github.io/2019/12/04/sql/"/>
 
 
 
 
 
-  <title>Hello World | WeiBo | 筱海乄</title>
+  <title>MySql | WeiBo | 筱海乄</title>
   
 
 
@@ -309,46 +310,342 @@ daovoice('update');
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huaungwj.github.io/2019/12/04/sql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筱海">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WeiBo | 筱海乄">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Hello World</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+          <h1 class="post-title" itemprop="name headline">MySql</h1>
         
-      </div>
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-04T17:51:56+08:00">
+                2019-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+  <span class="post-updated">
+    &nbsp; | &nbsp; post.updated
+    <time itemprop="dateUpdated" datetime="2020-01-30T06:47:38+08:00" content="2020-01-30">
+      2020-01-30
+    </time>
+  </span>
+
+
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/12/04/sql/" class="leancloud_visitors" data-flag-title="MySql">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                <span>℃</span>
+             </span>
+          
+
+          
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  742
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+               <span title="阅读时长">
+    3 分钟
+</span>
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><p>指定urf-8编码  </p>
+<ul>
+<li><code>CREATE DATABASE databasename DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</code></li>
+</ul>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><ul>
+<li><code>drop databases &lt;databasename&gt;;</code></li>
+<li><code>&gt;&gt;&gt; drop databases pwd;</code></li>
+</ul>
+<h2 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h2><p>通用语法:</p>
+<ul>
+<li><code>CREATE TABLE table_name (column_name column_type);</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE IF NOT EXISTS &#96;runoob_tbl&#96;(</span><br><span class="line">   &#96;runoob_id&#96; INT UNSIGNED AUTO_INCREMENT,   &#x2F;&#x2F; int无符号自增</span><br><span class="line">   &#96;runoob_title&#96; VARCHAR(100) NOT NULL,      </span><br><span class="line">   &#96;runoob_author&#96; VARCHAR(40) NOT NULL,      </span><br><span class="line">   &#96;submission_date&#96; DATE,</span><br><span class="line">   PRIMARY KEY ( &#96;runoob_id&#96; )</span><br><span class="line">)ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="删除数据表"><a href="#删除数据表" class="headerlink" title="删除数据表"></a>删除数据表</h2><ul>
+<li><code>DROP TABLE tableanme ;</code>   </li>
+</ul>
+<h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO table_name ( field1, field2,...fieldN )</span><br><span class="line">                       VALUES</span><br><span class="line">                       ( value1, value2,...valueN );</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name,column_name</span><br><span class="line">FROM table_name</span><br><span class="line">[WHERE Clause]</span><br><span class="line">[LIMIT N][ OFFSET M]</span><br></pre></td></tr></table></figure>
+<p>1.查询语句中你可以使用一个或者多个表，表之间使用逗号(,)分割，并使用WHERE语句来设定查询条件。<br>2.SELECT 命令可以读取一条或者多条记录。<br>3.你可以使用星号（*）来代替其他字段，SELECT语句会返回表的所有字段数据<br>4.你可以使用 WHERE 语句来包含任何条件。<br>5.你可以使用 LIMIT 属性来设定返回的记录数。<br>6.你可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。  </p>
+<h2 id="查询去重"><a href="#查询去重" class="headerlink" title="查询去重"></a>查询去重</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct 字段名 from table;</span><br></pre></td></tr></table></figure>
+
+<h2 id="concat函数"><a href="#concat函数" class="headerlink" title="concat函数"></a>concat函数</h2><ul>
+<li>功能：拼接字符 <code>&quot;1&quot;+&quot;23&quot; = &quot;123&quot;</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat (字段1,字段2 ) from table;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="ifnull函数："><a href="#ifnull函数：" class="headerlink" title="ifnull函数："></a>ifnull函数：</h2><ul>
+<li>功能：判断某字段或表达式是否为null，如果为null 返回指定的值，否则返回原本的值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 如果&#96;hello&#96;列为空则返回0</span><br><span class="line">select ifnull(hello, 0) from employees;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="isnull函数"><a href="#isnull函数" class="headerlink" title="isnull函数"></a>isnull函数</h2><ul>
+<li>功能：判断某字段或表达式是否为null，如果是，则返回1，否则返回0<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id, isnull(root) from table;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h2><ul>
+<li>where字句<br>用于筛选符合条件的数据 将不满足条件的行过滤<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from table </span><br><span class="line">    where id &#x3D; 1 or data &#x3D; &#39;hello&#39; ;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">BETWEEN…AND…</td>
+<td align="center">现在某一区间的值(包含头与结尾)</td>
+</tr>
+<tr>
+<td align="center">IN(set)</td>
+<td align="center">现在在in列表中的值 例：in(100,200)</td>
+</tr>
+<tr>
+<td align="center">LIKE通配符</td>
+<td align="center">模糊查询，Like语句中有两个通配符：% 用来匹配多个字符；例name like “%a”; “_”用来表示任意一个字符;</td>
+</tr>
+<tr>
+<td align="center">IS NULL</td>
+<td align="center">判断是否为空， is not null; 判断不为空</td>
+</tr>
+<tr>
+<td align="center">AND(&amp;&amp;)</td>
+<td align="center">多个条件同时成立</td>
+</tr>
+<tr>
+<td align="center">OR(||)</td>
+<td align="center">多个条件任意一个成立</td>
+</tr>
+<tr>
+<td align="center">not(!)</td>
+<td align="center">不成立，例：where not(salary&gt;100);</td>
+</tr>
+</tbody></table>
+<h2 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h2><p>ORDER BY </p>
+<ul>
+<li>使用ORDER BY 子句排序<ul>
+<li>ASC(ascend) 默认 升序</li>
+<li>DESC(descend) 降序<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查询名字含有a的行 按mid进行降序排序 显示前20行</span><br><span class="line">select * from table</span><br><span class="line">    where name like &quot;%a%&quot; </span><br><span class="line">    order by mid desc </span><br><span class="line">    limit 20;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">select 分组函数，分组后的字段</span><br><span class="line">from 表</span><br><span class="line">where 筛选条件</span><br><span class="line">group by 分组的字段</span><br><span class="line">having 分组后的筛选</span><br><span class="line">order by 排序列表</span><br></pre></td></tr></table></figure>
+
+<h2 id="简易备份与恢复"><a href="#简易备份与恢复" class="headerlink" title="简易备份与恢复"></a>简易备份与恢复</h2><p>本机可忽略主机名与端口<br>备份：<br><code>mysqldump -h主机名 -P端口 -u用户名 -p密码 --database 数据库名 &gt; 文件名.sql</code><br>恢复：<br><code>mysql -u用户名 -p密码 数据库名 &lt; 文件名.sql ;</code>  </p>
+
       
     </div>
     
     
     
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+  </div>
+
+  <div>
+      
+        
+
+      
+</div>
+
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat.jpg" alt="筱海 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫描二维码关注公众号一起成长~</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag"><i class="fa fa-tag"></i> mysql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/04/markdown/" rel="prev" title="markdown基本语法">
+                markdown基本语法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -527,7 +824,7 @@ daovoice('update');
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除数据库"><span class="nav-number">2.</span> <span class="nav-text">删除数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数据表"><span class="nav-number">3.</span> <span class="nav-text">创建数据表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除数据表"><span class="nav-number">4.</span> <span class="nav-text">删除数据表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入数据"><span class="nav-number">5.</span> <span class="nav-text">插入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询数据"><span class="nav-number">6.</span> <span class="nav-text">查询数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询去重"><span class="nav-number">7.</span> <span class="nav-text">查询去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#concat函数"><span class="nav-number">8.</span> <span class="nav-text">concat函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ifnull函数："><span class="nav-number">9.</span> <span class="nav-text">ifnull函数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isnull函数"><span class="nav-number">10.</span> <span class="nav-text">isnull函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件查询"><span class="nav-number">11.</span> <span class="nav-text">条件查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序查询"><span class="nav-number">12.</span> <span class="nav-text">排序查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组查询"><span class="nav-number">13.</span> <span class="nav-text">分组查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简易备份与恢复"><span class="nav-number">14.</span> <span class="nav-text">简易备份与恢复</span></a></li></ol></div>
             
 
           </div>

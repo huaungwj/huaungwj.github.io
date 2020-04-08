@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo NexT主题添加点击爱心效果</title>
-    <url>/2020/04/08/clicklove/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-创建js文件"><a href="#1-创建js文件" class="headerlink" title="1.创建js文件"></a>1.创建js文件</h2><p>在/themes/next/source/js/src下新建文件 clicklove.js ，接着把该链接下的代码拷贝粘贴到 clicklove.js 文件中。<br>代码如下:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
-<h2 id="2-修改-layout-swig"><a href="#2-修改-layout-swig" class="headerlink" title="2.修改_layout.swig"></a>2.修改_layout.swig</h2><p> 在\themes\next\layout_layout.swig文件末尾添加：<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <tags>
-        <tag>建站 Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端</title>
-    <url>/2020/04/06/index/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <categories>
-        <category>第一篇文章</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>前端成长</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本站的坑</title>
     <url>/2019/12/09/blog/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h4 id="本地环境："><a href="#本地环境：" class="headerlink" title="本地环境："></a>本地环境：</h4><ul>
@@ -63,6 +40,200 @@ error_page 500 502 503 504 /50x.html;
 ]]></content>
       <tags>
         <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo NexT主题添加点击爱心效果</title>
+    <url>/2020/04/08/clicklove/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-创建js文件"><a href="#1-创建js文件" class="headerlink" title="1.创建js文件"></a>1.创建js文件</h2><p>在/themes/next/source/js/src下新建文件 clicklove.js ，接着把该链接下的代码拷贝粘贴到 clicklove.js 文件中。<br>代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+<h2 id="2-修改-layout-swig"><a href="#2-修改-layout-swig" class="headerlink" title="2.修改_layout.swig"></a>2.修改_layout.swig</h2><p> 在\themes\next\layout_layout.swig文件末尾添加：<br> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>建站 Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown基本语法</title>
+    <url>/2019/12/04/markdown/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>`<br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del>  </p>
+<blockquote>
+<p>这是引用的内容    </p>
+<blockquote>
+<p>这是引用的内容    </p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容    </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="三个或者以上的符号会变成分割线"><a href="#三个或者以上的符号会变成分割线" class="headerlink" title="三个或者以上的符号会变成分割线"></a>三个或者以上的符号会变成分割线</h2><hr>
+<hr>
+<hr>
+<hr>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>![图片alt](图片地址 ‘’图片title’’)<br>示例：<br><img src="/static/img/number/5.jpg" alt="图片" title="cocoa"></p>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="超链接地址" title="超链接title">超链接名</a><br>title可加可不加<br>示例：<br><a href="http://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>无序列表：</p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<p>有序列表：<br>1.列表内容<br>2.列表内容<br>3.列表内容</p>
+<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>表头</th>
+<th align="center">表头</th>
+<th align="right">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+</tbody></table>
+<p>第二行分割表头和内容。<br>有一个就行，为了对齐，多加了几个<br>文字默认居左<br>-两边加：表示文字居中<br>-右边加：表示文字居右<br>注：原生的语法两边都要用 | 包起来。此处省略</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>语法：<br>单行代码：代码之间分别用一个反引号包起来<br>代码块  ：代码之间分别用三个反引号包起来，且两边的反引号单独占一行<br><code>hello world!\n</code>   </p>
+<pre><code>#include &lt;stdio.h&gt;
+int main (void){
+  printf(&quot;hello world!\n&quot;);
+  return 0;
+}</code></pre>]]></content>
+      <categories>
+        <category>基础</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySql</title>
+    <url>/2019/12/04/sql/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><p>指定urf-8编码  </p>
+<ul>
+<li><code>CREATE DATABASE databasename DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</code></li>
+</ul>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><ul>
+<li><code>drop databases &lt;databasename&gt;;</code></li>
+<li><code>&gt;&gt;&gt; drop databases pwd;</code></li>
+</ul>
+<h2 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h2><p>通用语法:</p>
+<ul>
+<li><code>CREATE TABLE table_name (column_name column_type);</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE TABLE IF NOT EXISTS &#96;runoob_tbl&#96;(</span><br><span class="line">   &#96;runoob_id&#96; INT UNSIGNED AUTO_INCREMENT,   &#x2F;&#x2F; int无符号自增</span><br><span class="line">   &#96;runoob_title&#96; VARCHAR(100) NOT NULL,      </span><br><span class="line">   &#96;runoob_author&#96; VARCHAR(40) NOT NULL,      </span><br><span class="line">   &#96;submission_date&#96; DATE,</span><br><span class="line">   PRIMARY KEY ( &#96;runoob_id&#96; )</span><br><span class="line">)ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="删除数据表"><a href="#删除数据表" class="headerlink" title="删除数据表"></a>删除数据表</h2><ul>
+<li><code>DROP TABLE tableanme ;</code>   </li>
+</ul>
+<h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">INSERT INTO table_name ( field1, field2,...fieldN )</span><br><span class="line">                       VALUES</span><br><span class="line">                       ( value1, value2,...valueN );</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT column_name,column_name</span><br><span class="line">FROM table_name</span><br><span class="line">[WHERE Clause]</span><br><span class="line">[LIMIT N][ OFFSET M]</span><br></pre></td></tr></table></figure>
+<p>1.查询语句中你可以使用一个或者多个表，表之间使用逗号(,)分割，并使用WHERE语句来设定查询条件。<br>2.SELECT 命令可以读取一条或者多条记录。<br>3.你可以使用星号（*）来代替其他字段，SELECT语句会返回表的所有字段数据<br>4.你可以使用 WHERE 语句来包含任何条件。<br>5.你可以使用 LIMIT 属性来设定返回的记录数。<br>6.你可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。  </p>
+<h2 id="查询去重"><a href="#查询去重" class="headerlink" title="查询去重"></a>查询去重</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select distinct 字段名 from table;</span><br></pre></td></tr></table></figure>
+
+<h2 id="concat函数"><a href="#concat函数" class="headerlink" title="concat函数"></a>concat函数</h2><ul>
+<li>功能：拼接字符 <code>&quot;1&quot;+&quot;23&quot; = &quot;123&quot;</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select concat (字段1,字段2 ) from table;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="ifnull函数："><a href="#ifnull函数：" class="headerlink" title="ifnull函数："></a>ifnull函数：</h2><ul>
+<li>功能：判断某字段或表达式是否为null，如果为null 返回指定的值，否则返回原本的值<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 如果&#96;hello&#96;列为空则返回0</span><br><span class="line">select ifnull(hello, 0) from employees;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="isnull函数"><a href="#isnull函数" class="headerlink" title="isnull函数"></a>isnull函数</h2><ul>
+<li>功能：判断某字段或表达式是否为null，如果是，则返回1，否则返回0<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select id, isnull(root) from table;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h2><ul>
+<li>where字句<br>用于筛选符合条件的数据 将不满足条件的行过滤<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select * from table </span><br><span class="line">    where id &#x3D; 1 or data &#x3D; &#39;hello&#39; ;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">BETWEEN…AND…</td>
+<td align="center">现在某一区间的值(包含头与结尾)</td>
+</tr>
+<tr>
+<td align="center">IN(set)</td>
+<td align="center">现在在in列表中的值 例：in(100,200)</td>
+</tr>
+<tr>
+<td align="center">LIKE通配符</td>
+<td align="center">模糊查询，Like语句中有两个通配符：% 用来匹配多个字符；例name like “%a”; “_”用来表示任意一个字符;</td>
+</tr>
+<tr>
+<td align="center">IS NULL</td>
+<td align="center">判断是否为空， is not null; 判断不为空</td>
+</tr>
+<tr>
+<td align="center">AND(&amp;&amp;)</td>
+<td align="center">多个条件同时成立</td>
+</tr>
+<tr>
+<td align="center">OR(||)</td>
+<td align="center">多个条件任意一个成立</td>
+</tr>
+<tr>
+<td align="center">not(!)</td>
+<td align="center">不成立，例：where not(salary&gt;100);</td>
+</tr>
+</tbody></table>
+<h2 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h2><p>ORDER BY </p>
+<ul>
+<li>使用ORDER BY 子句排序<ul>
+<li>ASC(ascend) 默认 升序</li>
+<li>DESC(descend) 降序<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 查询名字含有a的行 按mid进行降序排序 显示前20行</span><br><span class="line">select * from table</span><br><span class="line">    where name like &quot;%a%&quot; </span><br><span class="line">    order by mid desc </span><br><span class="line">    limit 20;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select 分组函数，分组后的字段</span><br><span class="line">from 表</span><br><span class="line">where 筛选条件</span><br><span class="line">group by 分组的字段</span><br><span class="line">having 分组后的筛选</span><br><span class="line">order by 排序列表</span><br></pre></td></tr></table></figure>
+
+<h2 id="简易备份与恢复"><a href="#简易备份与恢复" class="headerlink" title="简易备份与恢复"></a>简易备份与恢复</h2><p>本机可忽略主机名与端口<br>备份：<br><code>mysqldump -h主机名 -P端口 -u用户名 -p密码 --database 数据库名 &gt; 文件名.sql</code><br>恢复：<br><code>mysql -u用户名 -p密码 数据库名 &lt; 文件名.sql ;</code>  </p>
+]]></content>
+      <categories>
+        <category>基础</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
       </tags>
   </entry>
 </search>

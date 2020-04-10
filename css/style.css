@@ -2555,7 +2555,7 @@ article .readmore >a {
   align-items: center;
   align-self: center;
   align-content: center;
-  color: #555;
+  color: #fff;
   padding: 16px;
 }
 .cover-wrapper .cover .cover-body div.b {
@@ -2761,24 +2761,24 @@ article .readmore >a {
   -moz-transition: all 0.28s ease;
   -webkit-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
-  color: rgba(85,85,85,0.65);
+  color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.05);
   border-bottom: 2px solid transparent;
 }
 .cover-wrapper .cover .cover-body .menu ul>li>a:hover,
 .cover-wrapper .cover .cover-body .menu ul>li>a.active,
 .cover-wrapper .cover .cover-body .menu ul>li>a:active {
-  color: #555;
-  border-bottom: 2px solid #555;
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 .cover-wrapper .cover .cover-body .switcher > li a:hover {
   background: rgba(68,68,68,0.15);
 }
 footer {
   position: relative;
-  padding: 40px 10px 120px 10px;
+  padding: 0px 10px 40px 10px;
   width: 100%;
-  color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.5);
   margin: 0px auto;
   overflow: hidden;
   text-align: center;
@@ -2802,7 +2802,7 @@ footer .social-wrapper {
   font-size: 16px;
 }
 footer a {
-  color: rgba(255,255,255,0.75);
+  color: rgba(0,0,0,0.75);
   padding: 0;
   transition: all 0.28s ease;
   -moz-transition: all 0.28s ease;
@@ -2810,7 +2810,7 @@ footer a {
   -o-transition: all 0.28s ease;
 }
 footer a:hover {
-  color: #fff;
+  color: #000;
 }
 footer a.social {
   position: relative;
@@ -2823,11 +2823,11 @@ footer a.social {
   height: 36px;
   margin: 4px;
   border-radius: 100px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(0,0,0,0.75);
 }
 footer a.social:hover {
-  background: rgba(255,255,255,0.1);
-  color: #fff;
+  background: rgba(0,0,0,0.1);
+  color: #000;
 }
 footer .copyright {
   margin-top: 16px;

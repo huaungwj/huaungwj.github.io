@@ -458,7 +458,7 @@
 <a id="more"></a>
 <p>在layout/_partial/head.ejs的末尾 </head>的上方引用pjax</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;pjax&#x2F;pjax.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/img/wenzhang/pjax_1.png" alt="图片" title="cocoa"><br>在layout/layout.ejs的末尾<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>的上方插入代码</p>
+<p><img src="/img/wenzhang/pjax_1.png" alt="图片" title="cocoa"><br>在layout/layout.ejs的末尾</body>的上方插入代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">var pjax &#x3D; new Pjax(&#123;</span><br><span class="line">  elements: &quot;a&quot;,</span><br><span class="line">  selectors: [</span><br><span class="line">    &quot;title&quot;, &#x2F;&#x2F;pjax加载标题</span><br><span class="line">    &quot;.l_main&quot;, &#x2F;&#x2F;pjax加载主内容</span><br><span class="line">    &quot;.l_side&quot;, &#x2F;&#x2F;pjax加载侧边栏</span><br><span class="line">    &quot;.switcher .h-list&quot;, &#x2F;&#x2F; 使手机端的搜索框与菜单栏生效</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 <p><img src="/img/wenzhang/pjax_2.png" alt="图片" title="cocoa"><br>elements选择触发器，即点击什么来触发pjax（只能用a或者form），a为链接。</p>
 <p>selectors根据css选择器来选择更新的节点（即当触发elements时哪些内容会刷新，其余部分保持不变）<br>可以用节点、类、id等选择元素。用法参考：<br><a href="https://www.runoob.com/cssref/css-selectors.html" target="_blank" rel="noopener">css选择器</a><br>这里我设置的为：点击链接，则刷新标题、类为l_main与l_side的元素（页面内容与侧边栏）会刷新，其余不变。</p>
@@ -789,16 +789,16 @@
       
     
       
-        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
-        Use
+        本站使用
         <a href="/" target="_blank" class="codename">WeiBo | 筱海乄</a>
-        as theme, total visits
+        作为主题，总访问量为
           <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
-          times
+          次
         
       
     
@@ -1091,5 +1091,5 @@ document.addEventListener('pjax:complete', function (){
 
     </script>
 <div id="aplayer"></div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 </html>

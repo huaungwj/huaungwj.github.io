@@ -722,10 +722,12 @@ CREATE DATABASE databasename DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci.
       
       
       
-        <section id="comments">
-          <div id="gitalk-container"></div>
-        </section>
       
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
       
       
     </section>
@@ -974,24 +976,37 @@ CREATE DATABASE databasename DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci.
 
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: "aa1542f33d8e82e52b8d",
-      clientSecret: "2f75921e365ceefaa87bc087c347ce8d004e2b1d",
-      repo: "huaungwj.github.io",
-      owner: "huaungwj",
-      admin: "huaungwj",
-      
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-      
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.4.2/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == 'true';
+  var verify = 'true' == 'true';
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "8dMWdTLotXYjVORtHaw0kaQV-gzGzoHsz",
+    appKey: "GMppbuLLYujyfNIGv29ydIsc",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
   </script>
-
-
 
 
 
@@ -1128,8 +1143,8 @@ function LoadValine(){
         verify: verify,
         guest_info: guest_info,
         
-        appId: "",
-        appKey: "",
+        appId: "8dMWdTLotXYjVORtHaw0kaQV-gzGzoHsz",
+        appKey: "GMppbuLLYujyfNIGv29ydIsc",
         placeholder: "快来评论吧~",
         pageSize:'10',
         avatar:'mp',

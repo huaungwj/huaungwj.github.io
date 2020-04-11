@@ -62,6 +62,7 @@ html >::-webkit-scrollbar-thumb:hover {
   background: #ff5722;
 }
 body {
+  cursor: url("https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/mouse.cur"), auto;
   background-color: #f4f4f4;
 }
 body.modal-active {
@@ -3406,6 +3407,16 @@ div.hoverbox:hover >div.target {
 }
 .white-box {
   background: #fff;
+}
+canvas {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  z-index: -1;
 }
 #loading-bar-wrapper {
   position: fixed;

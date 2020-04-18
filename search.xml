@@ -87,6 +87,41 @@ error_page 500 502 503 504 /50x.html;
       </tags>
   </entry>
   <entry>
+    <title>爬取B站所有番剧入库MySql</title>
+    <url>/2019/12/23/bilibili_anime/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="github源码"><a href="#github源码" class="headerlink" title="github源码"></a><a href="https://github.com/Hotobun/Code/tree/master/python/spider/bilibili/anime" target="_blank" rel="external nofollow noopener noreferrer">github源码</a></h4><a id="more"></a>
+<h2 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h2><ul>
+<li>windows10 </li>
+<li>python </li>
+</ul>
+<h2 id="使用到的第三方库"><a href="#使用到的第三方库" class="headerlink" title="使用到的第三方库"></a>使用到的第三方库</h2><ul>
+<li>requests</li>
+<li>pymysql</li>
+<li>lxml</li>
+<li>sqlalchemy</li>
+</ul>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
+<li>mysql</li>
+</ul>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li>填写config相关参数 数据库 htmlheaders 等…  </li>
+<li>第一次使用   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">进入mysql 创建数据库:  </span><br><span class="line">`mysql&gt; create database bilibili character <span class="built_in">set</span> utf8 collate utf8_general_ci;`  </span><br><span class="line">参数 character <span class="built_in">set</span> utf8 : 指定数据库采用字符集 不能使用utf-8  </span><br><span class="line">参数 collate : 指定数据库字符集的排序规则 通过show character <span class="built_in">set</span> 查看  </span><br><span class="line">在终端运行或者直接打开`bilibili_db.py` 创建数据表  </span><br><span class="line">`$ python bilibili_db.py`</span><br></pre></td></tr></table></figure></li>
+<li>运行<code>blibili_anime.py</code></li>
+</ol>
+<hr>
+<p>没什么防爬机制 f12查看Network<br>发现bilibili.com/…page=1… 里面有一页的20条数据<br>page+1 就是下一页<br>headers 复制过来 然后就愉快地爬了   </p>
+<p>pkl文件夹里面的内容是每一页<code>requests.get(url)</code> 返回的<code>response</code>对象<br>喜欢的话可以打开查看 是一堆json  </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2019-12-23</span></span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"pkl/page1.pkl"</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    response = pickle.load(f)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/archive_img/bilibili_spider1.png" alt><br><img src="/img/archive_img/bilibili_spider2.png" alt></p>
+]]></content>
+      <tags>
+        <tag>mysql</tag>
+        <tag>spider</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown基本语法</title>
     <url>/2019/12/04/markdown/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><a id="more"></a>

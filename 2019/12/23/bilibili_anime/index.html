@@ -16,8 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>categories - WeiBo | 筱海乄</title>
+    <title>爬取B站所有番剧入库MySql - WeiBo | 筱海乄</title>
   
+    <meta name="keywords" content="mysql,spider,python">
+  
+  
+    <meta name="description" content="github源码">
   
 
   <!-- feed -->
@@ -313,7 +317,7 @@
 
 
 
-  <div class="l_body nocover">
+  <div class="l_body">
     <div class="body-wrapper">
       
 
@@ -321,7 +325,7 @@
   
 
   
-    <article id="page" class="post white-box shadow article-type-page" itemscope itemprop="blogPost">
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
       
 
 
@@ -334,8 +338,8 @@
           
   
     <h1 class="title">
-      <a href="/categories/index-1.html">
-        categories
+      <a href="/2019/12/23/bilibili_anime/">
+        爬取B站所有番剧入库MySql
       </a>
     </h1>
   
@@ -371,7 +375,7 @@
               <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Apr 7, 2020</p>
+    <p>发布于：Dec 23, 2019</p>
   </a>
 </div>
 
@@ -394,7 +398,93 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
+          <h4 id="github源码"><a href="#github源码" class="headerlink" title="github源码"></a><a href="https://github.com/Hotobun/Code/tree/master/python/spider/bilibili/anime" target="_blank" rel="external nofollow noopener noreferrer">github源码</a></h4><a id="more"></a>
+<h2 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h2><ul>
+<li>windows10 </li>
+<li>python </li>
+</ul>
+<h2 id="使用到的第三方库"><a href="#使用到的第三方库" class="headerlink" title="使用到的第三方库"></a>使用到的第三方库</h2><ul>
+<li>requests</li>
+<li>pymysql</li>
+<li>lxml</li>
+<li>sqlalchemy</li>
+</ul>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
+<li>mysql</li>
+</ul>
+<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><ol>
+<li>填写config相关参数 数据库 htmlheaders 等…  </li>
+<li>第一次使用   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">进入mysql 创建数据库:  </span><br><span class="line">`mysql&gt; create database bilibili character <span class="built_in">set</span> utf8 collate utf8_general_ci;`  </span><br><span class="line">参数 character <span class="built_in">set</span> utf8 : 指定数据库采用字符集 不能使用utf-8  </span><br><span class="line">参数 collate : 指定数据库字符集的排序规则 通过show character <span class="built_in">set</span> 查看  </span><br><span class="line">在终端运行或者直接打开`bilibili_db.py` 创建数据表  </span><br><span class="line">`$ python bilibili_db.py`</span><br></pre></td></tr></table></figure></li>
+<li>运行<code>blibili_anime.py</code></li>
+</ol>
+<hr>
+<p>没什么防爬机制 f12查看Network<br>发现bilibili.com/…page=1… 里面有一页的20条数据<br>page+1 就是下一页<br>headers 复制过来 然后就愉快地爬了   </p>
+<p>pkl文件夹里面的内容是每一页<code>requests.get(url)</code> 返回的<code>response</code>对象<br>喜欢的话可以打开查看 是一堆json  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 2019-12-23</span></span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"pkl/page1.pkl"</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    response = pickle.load(f)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/archive_img/bilibili_spider1.png" alt><br><img src="/img/archive_img/bilibili_spider2.png" alt></p>
+
           
+            <br>
+            
+              
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class="content">
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href="https://huaungwj.github.io/2019/12/23/bilibili_anime/">https://huaungwj.github.io/2019/12/23/bilibili_anime/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class="content article-entry">
+    
+      
+        <div class="fancybox"><img src="/img/wechat-qcode.jpg" height="64px"></div>
+      
+    
+      
+        <div class="fancybox"><img src="/img/WechatIMG21.jpeg" height="64px"></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+            
           
         </div>
         
@@ -405,10 +495,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-07T20:11:37+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-18T22:46:08+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 7, 2020</p>
+    <p>更新于：Apr 18, 2020</p>
   </a>
 </div>
 
@@ -416,6 +506,9 @@
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/mysql/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>mysql</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/spider/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>spider</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div>
+
 
         
       
@@ -435,7 +528,7 @@
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://huaungwj.github.io/categories/index-1.html&title=categories - WeiBo | 筱海乄&summary=" target="_blank">
+        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=https://huaungwj.github.io/2019/12/23/bilibili_anime/&title=爬取B站所有番剧入库MySql - WeiBo | 筱海乄&summary=github源码" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
           
@@ -443,7 +536,7 @@
       
     
       
-        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://huaungwj.github.io/categories/index-1.html&title=categories - WeiBo | 筱海乄&summary=" target="_blank">
+        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://huaungwj.github.io/2019/12/23/bilibili_anime/&title=爬取B站所有番剧入库MySql - WeiBo | 筱海乄&summary=github源码" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
           
@@ -451,7 +544,7 @@
       
     
       
-        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://huaungwj.github.io/categories/index-1.html&title=categories - WeiBo | 筱海乄&summary=" target="_blank">
+        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=https://huaungwj.github.io/2019/12/23/bilibili_anime/&title=爬取B站所有番剧入库MySql - WeiBo | 筱海乄&summary=github源码" target="_blank">
           
             <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
           
@@ -470,6 +563,31 @@
 
 
         
+        
+          <div class="prev-next">
+            
+              <a class="prev" href="/2020/04/08/clicklove/">
+                <p class="title"><i class="fas fa-chevron-left" aria-hidden="true"></i>Hexo NexT主题添加点击爱心效果</p>
+                <p class="content">1.创建js文件在/themes/next/source/js/src下新建文件 clicklove.js ，接着把该链接下的代码拷贝粘贴到 clicklove.js 文件中。代码如下:
+
+
+1...</p>
+              </a>
+            
+            
+              <a class="next" href="/2019/12/09/blog/">
+                <p class="title">本站的坑<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class="content">部署本地环境：
+MacOS 10.14
+环境:git, Node.js, hexo…
+生成本地静态网站
+服务器环境：
+centos7
+环境: git, Nginx, 创建git用户 略…
+使用g...</p>
+              </a>
+            
+          </div>
         
       </section>
     </article>
@@ -508,6 +626,13 @@
 
 
 
+  <script>
+    window.subData = {
+      title: '爬取B站所有番剧入库MySql',
+      tools: true
+    }
+  </script>
+
 
 </div>
 <aside class="l_side">
@@ -519,12 +644,42 @@
     
 
 
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+    
+  </header>
+
+
+    <div class="content">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#github源码"><span class="toc-text">github源码</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#本地环境"><span class="toc-text">本地环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用到的第三方库"><span class="toc-text">使用到的第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库"><span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#食用方法"><span class="toc-text">食用方法</span></a>
+    </li></div>
+  </section>
+
 
   
 
   
     
     
+  
+
+  <section class="widget related_posts shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span class="name">相关文章</span>
+    
+  </header>
+
+
+    <div class="content">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/12/04/sql/" title="MySql" rel="bookmark">MySql</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/12/09/blog/" title="本站的坑" rel="bookmark">本站的坑</a></h3></div></li></ul>
+    </div>
+  </section>
+
 
   
 
@@ -900,5 +1055,6 @@ document.addEventListener('pjax:complete', function (){
 <!-- 数字雨 -->
 <canvas id="canvas" width="1440" height="900"></canvas>
 <script type="text/javascript" src="/js/DigitalRain.js"></script>
+
 </body>
 </html>
